@@ -1,0 +1,40 @@
+﻿@model MVC_CRUD.Models.AddEmployeeViewModel
+@{
+}
+<h1>Add Employee</h1>
+<form method="post" action="Add" class="mt-5 row">
+    <div class="mb-3 col-2">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Name)</label>
+       
+    </div>
+
+    <div class="mb-3 col-6">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Email)</label>
+
+    </div>
+
+    <div class="mb-3 col-4">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Salary)</label>
+
+    </div>
+    <div class="mb-3 col-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.DateOfBirth)</label>
+
+    </div>
+    <div class="mb-3 col-4">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Department)</label>
+
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

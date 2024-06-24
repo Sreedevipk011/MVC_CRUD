@@ -1,0 +1,48 @@
+﻿@model MVC_CRUD.Models.UpdateEmployeeViewModel
+@{
+}
+<h1>Edit Employee</h1>
+<form method="post" action="/Employees/Update" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Id)</label>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Name)</label>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Email)</label>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Salary)</label>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.DateOfBirth)</label>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+        <label class="text-danger">@Html.ValidationMessageFor(x=>x.Department)</label>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees">Delete</button>
+</form>
